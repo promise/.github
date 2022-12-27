@@ -30,6 +30,34 @@ repository:
   enable_vulnerability_alerts: true
   topics: []
 
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        checks: []
+      enforce_admins: false
+      required_pull_request_reviews:
+        dismissal_restrictions:
+          users: []
+          teams: []
+          apps: []
+        dismiss_stale_reviews: false
+        require_code_owner_reviews: true
+        required_approving_review_count: 0
+        require_last_push_approval: false
+        bypass_pull_request_allowances:
+          users: []
+          teams: []
+          apps: []
+      required_linear_history: false
+      allow_force_pushes: true
+      allow_deletions: true
+      block_creations: false
+      required_conversation_resolution: true
+      lock_branch: false
+      allow_fork_syncing: true
+
 labels:
   - name: "bug"
     color: "D73A4A"
@@ -71,13 +99,3 @@ labels:
   - name: "stop-updating"
     color: "B60205"
     description: "Renovate stops updating"
-
-branches:
-  - name: main
-    protection:
-      required_status_checks:
-        strict: true
-        checks: []
-      required_pull_request_reviews:
-        require_code_owner_reviews: true
-      required_conversation_resolution: true
