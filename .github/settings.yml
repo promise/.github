@@ -4,7 +4,7 @@ repository:
  #name: .github
   description: null
   homepage: null
- #private: false
+  private: true
   has_issues: true
   has_projects: false
   has_downloads: false
