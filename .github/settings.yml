@@ -28,7 +28,7 @@ repository:
   web_commit_signoff_required: true
   enable_automated_security_fixes: false
   enable_vulnerability_alerts: true
-  topics: []
+  topics: ""
 
 branches:
   - name: main
