@@ -80,9 +80,4 @@ branches:
         checks: []
       required_pull_request_reviews:
         require_code_owner_reviews: true
-      restrictions:
-        users:
-          - promise
-        apps:
-          - renovate
       required_conversation_resolution: true
