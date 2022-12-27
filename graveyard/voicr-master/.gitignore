@@ -1,0 +1,5 @@
+.env
+shrinkwrap.yaml
+.glitch-assets
+*.tgz
+app

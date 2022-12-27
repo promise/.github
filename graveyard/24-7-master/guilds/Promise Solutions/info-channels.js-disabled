@@ -1,0 +1,85 @@
+const channels = {
+  'channel id': ['label role id', 'bell role id'],
+  '612660865119944746': [false, "581902525175693333"], // readme
+  '612405313349353476': ["619984800526106646", "506085705366110218"], // Countr
+  '612405379862757406': ["619984851990478849", "619985332254801958"], // DeepQuotesBot
+  '612405401241124874': ["619984855861559324"], // Nevrevr
+  '612405424120922132': ["619984841445867550", "619985321949528094"], // OutageDiscord
+  '612405462348070922': ["619984828418228244", "611899586893578240"], // Twinqle
+  '612405518006484992': ["619984853907013633"] // Voicr
+}, fetch = require("node-fetch"), Discord = require("discord.js")
+
+module.exports.initiate = async (client, guild, config, constants) => {
+  client.on("message", async message => {
+    if (!channels[message.channel.id]) return;
+    if (message.author.id !== config.owner) return;
+    if (!message.attachments.size) return;
+    if (!message.attachments.first().filename.endsWith(".json")) return;
+    
+    let data = await fetch(message.attachments.first().url).then(res => res.json()), embeds = [];
+    
+    embeds.push({
+      embed: {
+        title: data.title,
+        description: data.description,
+        color: 0xFFFFFF
+      }
+    })
+    
+    for (var info of data.information) {
+      let fields = [], first = true;
+      
+      for (var name in info) if (first == true) first = name; else fields.push({ name, value: info[name] })
+      
+      embeds.push({
+        embed: {
+          title: first,
+          description: info[first],
+          fields,
+          color: 0x36393F
+        }
+      })
+    }
+    
+    if (channels[message.channel.id].length) embeds.push({
+      embed: {
+        title: "Opt-in to " + data.title,
+        description: [
+          channels[message.channel.id][0] ? "Get access to channels by clicking the 🏷 Label reaction" : "",
+          channels[message.channel.id][1] ? "Get notified when we launch something cool with the 🔔 Bell reaction" : ""
+        ].filter(s => s.length).join("\n"),
+        color: 0xE67E22
+      }
+    })
+    
+    await message.channel.bulkDelete(50, true); let m;
+    for (var e of embeds) m = await message.channel.send(e);
+    if (channels[message.channel.id][0]) await m.react("🏷")
+    if (channels[message.channel.id][1]) await m.react("🔔")
+  })
+  client.on("messageReactionAdd", async (reaction, user) => { if (user.bot) return; console.log(user.tag)
+    if (channels[reaction.message.channel.id]) { console.log(1)
+      let member = await reaction.message.guild.fetchMember(user.id);
+      
+      if (reaction.emoji.name == "🏷") member.addRole(channels[reaction.message.channel.id][0])
+      if (reaction.emoji.name == "🔔") {
+        if (!channels[reaction.message.channel.id][0] || member.roles.get(channels[reaction.message.channel.id][0])) member.addRole(channels[reaction.message.channel.id][1]);
+        else reaction.remove(member);
+      }
+    }
+  })
+  client.on("messageReactionRemove", async (reaction, user) => { if (user.bot) return; console.log(user.tag)
+    if (channels[reaction.message.channel.id]) { console.log(1)
+      let member = await reaction.message.guild.fetchMember(user.id);
+      
+      if (reaction.emoji.name == "🏷") {
+        member.removeRole(channels[reaction.message.channel.id][0])
+        if (member.roles.get(channels[reaction.message.channel.id][1])) {
+          member.removeRole(channels[reaction.message.channel.id][1])
+          reaction.message.reactions.find(r => r.emoji.name == "🔔").remove(member);
+        }
+      }
+      if (reaction.emoji.name == "🔔") member.removeRole(channels[reaction.message.channel.id][1]);
+    }
+  })
+}

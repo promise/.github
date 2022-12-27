@@ -1,0 +1,120 @@
+[
+  {
+    "embed": {
+      "title": "Promise Solutions",
+      "description": "Promise Solutions is Promise's take on making the internet even better.",
+      "url": "https://promise.solutions/",
+      "footer": {
+        "text": "🔔 Get notified when we launch something cool!"
+      },
+      "thumbnail": {
+        "url": "https://i.imgur.com/pJxloQf.png",
+        "width": 512
+      },
+      "color": 7506394
+    },
+    "pinned": true,
+    "bellrole": "581902525175693333",
+    "message": "648627561840115724"
+  },
+  {
+    "embed": {
+      "title": "Countr",
+      "description": "Countr is an advanced counting bot which can manage a counting channel in your guild.",
+      "url": "https://countr.xyz/",
+      "footer": {
+        "text": "🔔 Get notified when we launch something cool!"
+      },
+      "thumbnail": {
+        "url": "https://images.discordapp.net/avatars/467377486141980682/1c67806e297f30f48e38e20d2356c907.png?size=2048",
+        "width": 512
+      },
+      "color": 12404274
+    },
+    "bellrole": "506085705366110218",
+    "message": "648627563928879169"
+  },
+  {
+    "embed": {
+      "title": "Promise 24/7",
+      "description": "A Discord bot with public source for educational and learning purposes. Feel free to use this in your code.",
+      "url": "https://github.com/gleeny/24-7",
+      "footer": {
+        "text": "🔔 Get notified when we launch something cool!"
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/avatars/463393056121683969/de7408bed74b09f1466b2c8e3ea72d25.png?size=2048",
+        "width": 512
+      },
+      "color": 5135764
+    },
+    "bellrole": "611899586893578240",
+    "message": "648627563928879169"
+  },
+  {
+    "embed": {
+      "title": "@OutageDiscord",
+      "description": "OutageDiscord notifies you whenever Discord has ~~a stroke~~ an outage. Hit the Twitter bell to get notified instantly on when Discord is having issues.",
+      "url": "https://twitter.com/OutageDiscord",
+      "footer": {
+        "text": "🔔 Get notified when we launch something cool!"
+      },
+      "thumbnail": {
+        "url": "https://pbs.twimg.com/profile_images/1198385873550823425/NBPHi6jK_400x400.png",
+        "width": 512
+      },
+      "color": 4437377
+    },
+    "bellrole": "619985321949528094",
+    "message": "648627566047002648"
+  },
+  {
+    "embed": {
+      "title": "@DeepQuotesBot",
+      "description": "DeepQuotesBot is the bot for everyone feeling depressed once in a while. It's just a bad day, not a bad life.",
+      "url": "https://twitter.com/DeepQuotesBot",
+      "footer": {
+        "text": "🔔 Get notified when we launch something cool!"
+      },
+      "thumbnail": {
+        "url": "https://pbs.twimg.com/profile_images/1150161188019482625/_JFh6G35_400x400.jpg",
+        "width": 512
+      },
+      "color": 4475729
+    },
+    "bellrole": "619985332254801958",
+    "message": "648627573995339825"
+  },
+  {
+    "embed": {
+      "title": "Voicr",
+      "description": "Voicr is a Discord bot that allow you to give users a role when they enter a specific voice channel.",
+      "url": "https://github.com/gleeny/voicr",
+      "footer": {
+        "text": "❗ This project is discontinued."
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/avatars/472842075310653447/75469f4c114fc5b5e712e448974eabea.png?size=2048",
+        "width": 512
+      },
+      "color": 31167
+    },
+    "message": "648627581477978132"
+  },
+  {
+    "embed": {
+      "title": "Nevrevr",
+      "description": "Nevrevr is a Discord bot that gives you fun Never-Have-I-Ever with over 500+ questions in multiple categories.",
+      "url": "https://github.com/gleeny/nevrevr",
+      "footer": {
+        "text": "❗ This project is discontinued."
+      },
+      "thumbnail": {
+        "url": "https://cdn.discordapp.com/avatars/475041313515896873/4b7454fce15cfcc465f81e1ce0be67bb.png?size=2048",
+        "width": 512
+      },
+      "color": 5347385
+    },
+    "message": "648627589321326593"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "24-7",
+  "description": "A Discord bot made public for educational and learning purposes. Feel free to use this in your code.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleeny/24-7.git"
+  },
+  "author": "Promise <me@promise.solutions> (https://promise.solutions/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gleeny/24-7/issues"
+  },
+  "homepage": "https://github.com/gleeny/24-7#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "discord.js": "^11.5.1",
+    "erlpack": "github:discordapp/erlpack",
+    "fs": "0.0.2",
+    "get-video-id": "^3.1.4",
+    "node-fetch": "^2.6.0"
+  }
+}
