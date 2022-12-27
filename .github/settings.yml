@@ -1,11 +1,11 @@
 # https://github.com/repository-settings/app
 
 repository:
-  # name:
-  # description:
-  # homepage:
-  # topics:
-  # private:
+ #name: .github
+  description: null
+  homepage: null
+  topics: null
+ #private: false
   has_issues: true
   has_projects: false
   has_wiki: false
